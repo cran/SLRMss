@@ -1,0 +1,30 @@
+Package: SLRMss
+Title: Symmetric Linear Regression Models for Small Samples
+Version: 1.0.0
+Authors@R: c(
+    person("Ivonaldo S.", "da Silva-Júnior", , "ivosilvestresjr@gmail.com", role = c("aut", "cre")),
+    person("Francisco Moisés C.", "de Medeiros", , "francisco.medeiros@ufrn.br", role = "aut",
+           comment = c(ORCID = "0000-0001-6751-2666")),
+    person("Eliardo", "Costa", role = "aut",
+           comment = c(ORCID = "0000-0003-4528-0379"))
+  )
+Description: Ordinary and modified statistics for symmetrical linear
+    regression models with small samples. The supported ordinary
+    statistics include Wald, score, likelihood ratio and gradient. The
+    modified statistics include score, likelihood ratio and gradient.
+    Diagnostic tools associated with the fitted model are implemented. For
+    more details see Medeiros and Ferrari (2017) <DOI:10.1111/stan.12107>.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Imports: methods, normalp, ssym
+NeedsCompilation: no
+Packaged: 2025-07-06 15:25:48 UTC; eliardocosta
+Author: Ivonaldo S. da Silva-Júnior [aut, cre],
+  Francisco Moisés C. de Medeiros [aut] (ORCID:
+    <https://orcid.org/0000-0001-6751-2666>),
+  Eliardo Costa [aut] (ORCID: <https://orcid.org/0000-0003-4528-0379>)
+Maintainer: Ivonaldo S. da Silva-Júnior <ivosilvestresjr@gmail.com>
+Depends: R (>= 3.5.0)
+Repository: CRAN
+Date/Publication: 2025-07-09 13:20:02 UTC

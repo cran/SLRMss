@@ -1,0 +1,11 @@
+bibentry(
+  bibtype  = "Article",
+  title    = "Small-sample testing inference in symmetric and log-symmetric linear regression models",
+  author   = "Francisco M. C. Medeiros, Silvia L. P. Ferrari",
+  journal  = "Statistica Neerlandica",
+  year     = "2017",
+  volume   = "71",
+  number   = "3",
+  pages    = "200-224",
+  doi      = "10.1111/stan.12107"
+)
