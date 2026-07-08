@@ -1,6 +1,6 @@
-#' Extract residuals model for SLRMss objects
+#' Extract Residuals Model for SLRMss Objects
 #' 
-#' This function provides the residuals of a SLRMss model.
+#' This function provides the residuals for a SLRMss model.
 #'
 #' @param object An object of class \code{SLRMss}.
 #' @param H0 If TRUE, choose the residuals under null hypothesis, if FALSE, choose the residuals under alternative hypothesis (default).

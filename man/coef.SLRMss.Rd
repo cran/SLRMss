@@ -2,7 +2,7 @@
 % Please edit documentation in R/coef.SLRMss.R
 \name{coef.SLRMss}
 \alias{coef.SLRMss}
-\title{Extract the model coefficients for a SLRMss object}
+\title{Extract Model Coefficients for SLRMss Objects}
 \usage{
 \method{coef}{SLRMss}(object, H0 = FALSE, ...)
 }

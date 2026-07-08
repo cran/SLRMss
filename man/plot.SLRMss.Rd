@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot.SLRMss.R
 \name{plot.SLRMss}
 \alias{plot.SLRMss}
-\title{Diagnostic plots for SLRMss objects}
+\title{Diagnostic Plots for SLRMss Objects}
 \usage{
 \method{plot}{SLRMss}(
   x,

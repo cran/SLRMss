@@ -2,7 +2,7 @@
 % Please edit documentation in R/envplot.R
 \name{envplot}
 \alias{envplot}
-\title{Quantile-quantile plots with simulated envelope of residuals for SLRMss objects}
+\title{Quantile-Quantile Plots with Simulated Envelope of Residuals for SLRMss Objects}
 \usage{
 envplot(
   object,
@@ -45,7 +45,7 @@ envplot(
 Quantile-quantile plot with simulated envelope for a SLRMss object.
 }
 \description{
-This function provides an envelope plot of a fitted SLRMss model.
+This function provides an envelope plot for a fitted SLRMss model.
 }
 \examples{
 data(orange)

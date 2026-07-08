@@ -1,6 +1,6 @@
-#' Extract model fitted values for a SLRMss object
+#' Extract Model Fitted Values for SLRMss Objects
 #' 
-#' This function provides the fitted values of a SLRMss model.
+#' This function provides the fitted values for a SLRMss model.
 #'
 #' @param object An object of class \code{SLRMss}.
 #' @param H0 If TRUE, choose the fitted values under null hypothesis, if FALSE, choose the fitted values under alternative hypothesis (default).

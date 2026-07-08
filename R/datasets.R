@@ -1,4 +1,4 @@
-#' Cheese data set
+#' Cheese Data Set
 #'
 #' The Nateghi's cheese data set gives measurements of the cheddar cheese textures.
 #'
@@ -16,7 +16,7 @@
 #' @format A data frame with 16 observations on the following 4 variables.
 NULL
 
-#' Orange data Set
+#' Orange Data Set
 #'
 #' The Mirhosseini's and Tan's data set gives the measurements of the physicochemical properties of emulsion in orange drinks.
 #'

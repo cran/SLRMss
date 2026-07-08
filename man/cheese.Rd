@@ -3,7 +3,7 @@
 \docType{data}
 \name{cheese}
 \alias{cheese}
-\title{Cheese data set}
+\title{Cheese Data Set}
 \format{
 A data frame with 16 observations on the following 4 variables.
 }

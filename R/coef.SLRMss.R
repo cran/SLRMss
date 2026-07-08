@@ -1,4 +1,4 @@
-#' Extract the model coefficients for a SLRMss object
+#' Extract Model Coefficients for SLRMss Objects
 #' 
 #' This function provides the coefficients of a \code{SLRMss} model.
 #'

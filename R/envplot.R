@@ -1,6 +1,6 @@
-#' Quantile-quantile plots with simulated envelope of residuals for SLRMss objects
+#' Quantile-Quantile Plots with Simulated Envelope of Residuals for SLRMss Objects
 #' 
-#' This function provides an envelope plot of a fitted SLRMss model.
+#' This function provides an envelope plot for a fitted SLRMss model.
 #'
 #' @param object An object of class \code{SLRMss}.
 #' @param J The number of Monte Carlo replications. 100 by default.

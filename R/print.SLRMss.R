@@ -1,4 +1,4 @@
-#' Print values of a SLRMss object
+#' Print Values for SLRMss Objects
 #' 
 #' This function displays a succinct summary of the fitted model. It includes the mean and dispersion parameter estimates, corrected Akaike information criterion and Bayesian information criterion.
 #'

@@ -3,7 +3,7 @@
 \docType{data}
 \name{orange}
 \alias{orange}
-\title{Orange data Set}
+\title{Orange Data Set}
 \format{
 A data frame with 20 observations on the following 4 variables.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/SLRMss.R
 \name{SLRMss}
 \alias{SLRMss}
-\title{Symmetric Linear Regression Models for small samples}
+\title{Symmetric Linear Regression Models for Small Samples}
 \usage{
 SLRMss(formula, family, xi, statistic, testingbeta, data)
 }
@@ -49,7 +49,7 @@ A list with the following components
 \item{BIC}{The Bayesian Information Criterion.}
 }
 \description{
-Computes Wald, Likelihood Ratio, Score, or Gradient statistics for symmetric linear regression models. Also computes modified versions of the Likelihood Ratio, Score, and Gradient tests for small sample sizes.
+This function computes Wald, Likelihood Ratio, Score, or Gradient statistics for Symmetric Linear Regression Models. Also computes modified versions of the Likelihood Ratio, Score, and Gradient tests for small sample sizes.
 }
 \examples{
 data(orange)

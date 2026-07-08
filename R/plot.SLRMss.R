@@ -1,4 +1,4 @@
-#' Diagnostic plots for SLRMss objects
+#' Diagnostic Plots for SLRMss Objects
 #' 
 #' This function provides four plot for residual analysis. The first plot shows the standardized residuals against the fitted values. The second one shows the standardized residuals against by their index. The third one presents QQ-normal plot of them and the last one shows their density estimate.
 #'

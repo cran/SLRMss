@@ -1,6 +1,6 @@
-#' SLRMss object summaries
+#' SLRMss Object Summaries
 #' 
-#' This function displays the summary of the fitted model. It includes parameter estimates under both, null and alternative hypothesis, corrected Akaike information criterion, bayesian information criterion and choosed statistics.
+#' This function displays the summary for the fitted model. It includes parameter estimates under both, null and alternative hypothesis, corrected Akaike information criterion, Bayesian information criterion and the chosen statistics.
 #'
 #' @param object An object of class \code{SLRMss}.
 #' @param ... Currently ignored.

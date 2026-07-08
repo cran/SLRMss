@@ -2,7 +2,7 @@
 % Please edit documentation in R/summary.SLRMss.R
 \name{summary.SLRMss}
 \alias{summary.SLRMss}
-\title{SLRMss object summaries}
+\title{SLRMss Object Summaries}
 \usage{
 \method{summary}{SLRMss}(object, ...)
 }
@@ -15,7 +15,7 @@
 A selected components extracted from a SLRMss object.
 }
 \description{
-This function displays the summary of the fitted model. It includes parameter estimates under both, null and alternative hypothesis, corrected Akaike information criterion, bayesian information criterion and choosed statistics.
+This function displays the summary for the fitted model. It includes parameter estimates under both, null and alternative hypothesis, corrected Akaike information criterion, Bayesian information criterion and the chosen statistics.
 }
 \examples{
 data(orange)

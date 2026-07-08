@@ -1,6 +1,6 @@
-#' Symmetric Linear Regression Models for small samples
+#' Symmetric Linear Regression Models for Small Samples
 #' 
-#' Computes Wald, Likelihood Ratio, Score, or Gradient statistics for symmetric linear regression models. Also computes modified versions of the Likelihood Ratio, Score, and Gradient tests for small sample sizes.
+#' This function computes Wald, Likelihood Ratio, Score, or Gradient statistics for Symmetric Linear Regression Models. Also computes modified versions of the Likelihood Ratio, Score, and Gradient tests for small sample sizes.
 #'
 #' @param formula An object of class \code{formula} (or one that can be coerced to that class): a symbolic description of the model to be fitted.
 #' @param family A description of the error distribution to be used in the model. There are four supported families, Normal, t-Student, Power Exponential and Logistic ("Normal", "Student", "Powerexp" and "Logistic", respectively)
@@ -76,7 +76,7 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
         colnames(X1)=colnames(X)[colnames(X)%in%testingbeta]
         X2 = as.matrix(X[,!colnames(X)%in%testingbeta])
         colnames(X2)=colnames(X)[!colnames(X)%in%testingbeta]
-        R= X1 - X2%*%solve(crossprod(X2))%*%crossprod(X2,X1)
+        R= qr.resid(qr(X2), X1)
         if(colnames(X2)[1]=="(Intercept)"){
           if(ncol(X2)==1){
             formula2=formula(paste(f1,"~","1"))
@@ -92,7 +92,7 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
         etil=y-X2%*%betatil
         beta1 = betachapeu[betash0]
         beta2 = betachapeu[-betash0]
-        Z2 = X2%*%solve(crossprod(X2))%*%t(X2)
+        Z2 = tcrossprod(qr.Q(qr(X2)))
         
       }else{
         if (q == p & all(betash0<=p)){
@@ -203,7 +203,7 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
           warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta %in% colnames(X))],collapse=",")," ignored."))
         }
         testingbeta=testingbeta[(testingbeta %in% colnames(X))]
-        beta0=solve(crossprod(X))%*%crossprod(X,y)
+        beta0=qr.solve(X, y)
         phi0=as.numeric(sqrt(crossprod(y-X%*%beta0)/n))
         m=length(beta0)+1
         xi=NULL
@@ -262,10 +262,10 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
           colnames(X1)=colnames(X)[colnames(X)%in%testingbeta]
           X2 = as.matrix(X[,!colnames(X)%in%testingbeta])
           colnames(X2)=colnames(X)[!colnames(X)%in%testingbeta]
-          R= X1 - X2%*%solve(crossprod(X2))%*%crossprod(X2,X1)
+          R= qr.resid(qr(X2), X1)
           beta1 = betachapeu[betash0]
           beta2 = betachapeu[-betash0]
-          beta02=solve(crossprod(X2))%*%crossprod(X2,y)
+          beta02=qr.solve(X2, y)
           phi02=as.numeric(sqrt(crossprod(y-X2%*%beta02)/n))
           m2=length(beta02)+1
           
@@ -293,7 +293,7 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
           
           
           etil=y-X2%*%betatil
-          Z2 = X2%*%solve(crossprod(X2))%*%t(X2)
+          Z2 = tcrossprod(qr.Q(qr(X2)))
           Wtil=W(betatil,phitil,X2)
           
         }else{
@@ -323,7 +323,7 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
       }
     }
     
-    Z= X%*%solve(crossprod(X))%*%t(X)
+    Z= tcrossprod(qr.Q(qr(X)))
     Zd = diag(c(diag(Z)),ncol=n)
     Z2d = diag(c(diag(Z2)),ncol=n)
     rozz=n*sum(diag(Zd%*%Zd))
@@ -352,7 +352,7 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
         
       }else{
         if(statistic=="Score"){
-          st = crossprod(etil,Wtil)%*%X1%*%solve(crossprod(R))%*%crossprod(X1,Wtil)%*%etil/(delta20000*phitil^2)
+          st = crossprod(etil,Wtil)%*%X1%*%chol2inv(chol(crossprod(R)))%*%crossprod(X1,Wtil)%*%etil/(delta20000*phitil^2)
           
           b0=delta21000/(delta20000^2) + 1
           b1= delta11001*(delta11001 - delta01000)/(delta20000^2*(delta20002- 1))
@@ -421,12 +421,12 @@ SLRMss <- function(formula, family, xi, statistic, testingbeta,data){
       estatisticas = as.table(t(estatisticas))
     }
     
-    kbinv = sqrt(diag(phichapeu^2 * solve(crossprod(X))/delta20000))
+    kbinv = sqrt(diag(phichapeu^2 * chol2inv(chol(crossprod(X)))/delta20000))
     mu = matrix(c(betachapeu,kbinv),ncol=2)
     rownames(mu)= colnames(X)
     colnames(mu)=c("Estimate","Std. error")
     
-    kbinv2 = sqrt(diag(phitil^2 * solve(crossprod(X2))/delta20000))
+    kbinv2 = sqrt(diag(phitil^2 * chol2inv(chol(crossprod(X2)))/delta20000))
     mu0 = matrix(c(betatil,kbinv2),ncol=2)
     rownames(mu0)= colnames(X2)
     colnames(mu0)=c("Estimate","Std. error")

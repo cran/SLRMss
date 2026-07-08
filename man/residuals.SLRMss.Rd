@@ -2,7 +2,7 @@
 % Please edit documentation in R/residuals.SLRMss.R
 \name{residuals.SLRMss}
 \alias{residuals.SLRMss}
-\title{Extract residuals model for SLRMss objects}
+\title{Extract Residuals Model for SLRMss Objects}
 \usage{
 \method{residuals}{SLRMss}(object, H0 = FALSE, std = FALSE, ...)
 }
@@ -19,7 +19,7 @@
 Residuals extracted from a SLRMss object.
 }
 \description{
-This function provides the residuals of a SLRMss model.
+This function provides the residuals for a SLRMss model.
 }
 \examples{
 data(orange)

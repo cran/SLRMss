@@ -2,7 +2,7 @@
 % Please edit documentation in R/print.SLRMss.R
 \name{print.SLRMss}
 \alias{print.SLRMss}
-\title{Print values of a SLRMss object}
+\title{Print Values for SLRMss Objects}
 \usage{
 \method{print}{SLRMss}(x, ...)
 }

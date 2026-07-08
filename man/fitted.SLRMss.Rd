@@ -2,7 +2,7 @@
 % Please edit documentation in R/fitted.SLRMss.R
 \name{fitted.SLRMss}
 \alias{fitted.SLRMss}
-\title{Extract model fitted values for a SLRMss object}
+\title{Extract Model Fitted Values for SLRMss Objects}
 \usage{
 \method{fitted}{SLRMss}(object, H0 = FALSE, ...)
 }
@@ -17,7 +17,7 @@
 Fitted values extracted from the SLRMss object.
 }
 \description{
-This function provides the fitted values of a SLRMss model.
+This function provides the fitted values for a SLRMss model.
 }
 \examples{
 data(orange)
